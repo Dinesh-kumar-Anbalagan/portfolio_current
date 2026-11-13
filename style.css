@@ -8,6 +8,199 @@ body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 system-ui,sans
   gap: 8px;
 }
 
+
+/* Technology Pills */
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  margin: 24px 0 12px;
+  list-style: none;
+  max-width: 650px;
+}
+
+.pills li {
+  padding: 9px 13px;
+  border: 1px solid #383838;
+  background: rgba(20, 20, 20, 0.8);
+  color: #f5f2ee;
+  font-family: monospace;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.pills li:hover {
+  border-color: #ff914d;
+  background: rgba(255, 145, 77, 0.1);
+  color: #ff914d;
+  transform: translateY(-3px);
+}
+
+/* Remove any fading effect */
+.pills {
+  mask-image: none;
+  -webkit-mask-image: none;
+}
+
+/* Link below technology stack */
+.stack-next {
+  display: inline-block;
+  margin-top: 2px;
+  color: #ff914d;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.stack-next:hover {
+  color: #ffb17e;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .pills {
+    gap: 7px;
+  }
+
+  .pills li {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+}
+
+
+
+/* Force all technology pills to be fully visible */
+.pills,
+.pills li,
+.pills li:nth-child(n),
+.pills li:last-child {
+  opacity: 1 !important;
+  visibility: visible !important;
+  filter: none !important;
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
+}
+
+/* Remove gradient fading from the list */
+.pills {
+  background-image: none !important;
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
+}
+
+/* Keep text and borders clearly visible */
+.pills li {
+  color: #f5f2ee !important;
+  border: 1px solid #444 !important;
+  background: #171717 !important;
+}
+
+/* Orange hover effect */
+.pills li:hover {
+  color: #ff914d !important;
+  border-color: #ff914d !important;
+  background: #241a15 !important;
+}
+
+.pills {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 16px;
+  max-width: 720px;
+}
+
+.pills li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 8px;
+  min-width: 0;
+
+  background: #171717;
+  border: 1px solid #383838;
+  color: #f5f2ee;
+
+  font-family: monospace;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.pills li:hover {
+  border-color: #ff914d;
+  color: #ff914d;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 650px) {
+  .pills {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Align all pills vertically within each row */
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.pills li {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  height: 34px;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+
+
+/* Fix the last four technology pills */
+.pills li:nth-last-child(-n+4) {
+  position: relative !important;
+  top: 0 !important;
+  bottom: auto !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  transform: translateY(0) !important;
+  align-self: center !important;
+}
+
+/* Ensure consistent positioning */
+.pills {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+.pills li {
+  box-sizing: border-box !important;
+  height: 34px !important;
+  margin: 0 !important;
+}
+
 .toolkit-heading .dot {
   margin-right: 0;
   flex-shrink: 0;
